@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anees Ul Haq Mohammad</title>
+<meta name="description" content="Anees Ul Haq Mohammad — Data Validation Specialist and BI developer working with healthcare finance data. SQL, Power BI, Python, AWS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: confident, energetic, professional — an analyst who ships
+   IDEA: a live data pipeline — stages lit in color, skills colour-coded like dashboard series
+   PICTURE: the career pipeline glowing across a cobalt hero
+   COLOUR and TYPE: cobalt hero, coral accent, sun/mint/sky series colours; Hanken Grotesk
+   LAYOUT: bold hero band, then alternating white and soft-blue sections down a strict left edge */
+:root{color-scheme:light dark;
+  --bg:light-dark(#ffffff,#10131c);--ink:light-dark(#141a2e,#eef1fa);
+  --muted:light-dark(#566079,#a3acc4);--plane:light-dark(#eef2ff,#171c2b);
+  --line:light-dark(#141a2e,#eef1fa);--rule:light-dark(#d6ddf0,#2a3146);
+  --hero:light-dark(#2340d6,#1a2c9c);--coral:#ff5a3c;--sun:#ffc23c;--mint:#16c2a3;--sky:#5aa9ff;--pink:#ff6fae;
+  --yel:#ffc23c;--card:light-dark(#ffffff,#1c2233)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Hanken Grotesk",system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(28px,4vw,64px) max(5vw,16px)}
+.band.plane{background:var(--plane)}
+nav.top{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;gap:6px;align-items:center;padding:10px max(5vw,16px);overflow-x:auto}
+nav .brand{font-weight:700;margin-right:auto;white-space:nowrap;padding-right:12px}
+nav a.l{text-decoration:none;padding:10px 12px;border-radius:6px;white-space:nowrap;font-weight:500;color:var(--muted)}
+nav a.l:hover,nav a.l.on{color:var(--ink);background:var(--card)}
+h1{font-size:clamp(34px,5vw,52px);line-height:1.05;margin:0 0 10px;font-weight:600;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(28px,3.4vw,36px);line-height:1.1;margin:0 0 24px;font-weight:600;text-wrap:balance}
+h3{font-size:19px;line-height:1.3;margin:0;font-weight:600}
+.role{font-size:20px;color:var(--muted);margin:0 0 18px}
+header.hero{background:radial-gradient(900px 500px at 85% 10%,#3d63ff 0%,transparent 60%),radial-gradient(700px 400px at 0% 100%,#ff5a3c55 0%,transparent 60%),var(--hero);color:#fff}
+header.hero .role{color:#c9d4ff}
+.id{display:flex;align-items:center;gap:clamp(16px,3vw,32px);margin-bottom:8px}
+.avatar{position:relative;flex:none;width:clamp(96px,14vw,148px);aspect-ratio:1;border-radius:50%;padding:5px;background:conic-gradient(from 200deg,#5aa9ff,#16c2a3,#ff5a3c,#ffc23c,#5aa9ff);box-shadow:0 12px 40px -10px #00000080}
+.avatar span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:#1a2c9c;color:#fff;font-weight:700;font-size:clamp(28px,4vw,44px)}
+.avatar img{position:absolute;inset:5px;width:calc(100% - 10px);height:calc(100% - 10px);border-radius:50%;object-fit:cover;object-position:center 25%;border:3px solid #fff;z-index:1}
+@media(max-width:600px){.id{flex-direction:column;align-items:flex-start}}
+header.hero .role b{color:var(--sun);font-weight:600}
+header.hero .btn{border-color:#fff;color:#fff}
+header.hero .btn.solid{background:var(--coral);border-color:var(--coral);color:#fff}
+header.hero .btn:hover{background:#ffffff1f}
+header.hero .btn.solid:hover{background:#ff7356}
+header.hero .fig{background:#ffffff12;border:1px solid #ffffff2a;border-radius:14px}
+header.hero .stats{background:transparent;gap:12px;margin-top:16px}
+header.hero .stat{background:#ffffff14;border-radius:12px;padding:16px 18px}
+header.hero .stat span{color:#c9d4ff}
+.stat:nth-child(1) b{color:var(--sun)}.stat:nth-child(2) b{color:#7ff0d9}.stat:nth-child(3) b{color:#ffb3a3}
+h2{position:relative;padding-bottom:12px}
+h2::after{content:"";position:absolute;left:0;bottom:0;width:56px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--coral),var(--sun))}
+.lede{max-width:66ch;font-size:17px;margin:0 0 22px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:2px solid var(--line);border-radius:6px;background:transparent;color:var(--ink);font:600 15px "Hanken Grotesk",sans-serif;text-decoration:none;cursor:pointer}
+.btn.solid{background:var(--line);color:var(--bg)}
+.btn:focus-visible,.chip:focus-visible,nav a:focus-visible{outline:3px solid var(--yel);outline-offset:2px}
+.fig{position:relative;min-height:300px;margin-top:34px;background:var(--card);border-radius:4px}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);margin-top:1px}
+.stat{background:var(--bg);padding:18px 0 4px}
+.stat b{display:block;font-size:clamp(26px,3.6vw,36px);font-weight:600;line-height:1.1}
+.stat span{color:var(--muted);font-size:14px}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px}
+.filterbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 26px;color:var(--muted);font-size:14px}
+.chip{min-height:36px;padding:4px 12px;border:1px solid var(--rule);border-radius:999px;background:var(--bg);color:var(--ink);font:500 14px "Hanken Grotesk",sans-serif;cursor:pointer}
+.chip{transition:transform .15s,background .15s}
+.chip:hover{transform:translateY(-1px);border-color:var(--c,var(--coral))}
+.chip[style*="--c"]{border-color:color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 12%,var(--bg))}
+.chip.on,.chip.on[style*="--c"]{background:var(--coral);border-color:var(--coral);color:#fff}
+.chip.tag{min-height:28px;font-size:13px;padding:2px 10px;background:color-mix(in srgb,var(--sky) 12%,transparent);border-color:color-mix(in srgb,var(--sky) 35%,transparent)}
+.job{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding:24px;margin-bottom:16px;background:var(--card);border-radius:14px;box-shadow:0 1px 0 var(--rule),0 8px 24px -16px #2340d655;transition:opacity .25s}
+.job .when{font-weight:700;color:var(--hero)}
+:root[data-theme=dark] .job .when{color:var(--sky)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .job .when{color:var(--sky)}}
+.job:first-child .when::after{content:"Current";display:inline-block;margin-left:8px;padding:1px 8px;border-radius:999px;background:var(--mint);color:#06372e;font-size:12px;font-weight:700;vertical-align:2px}
+.job .where{color:var(--muted);font-size:14px}
+.job ul{margin:12px 0 12px;padding-left:20px}
+.job li{margin:4px 0}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.dim{opacity:.28}
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:28px 32px}
+.skills h3{font-size:15px;color:var(--muted);font-weight:600;margin-bottom:10px}
+.skills .tags{gap:8px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.card{background:var(--card);padding:22px;border-radius:14px;transition:opacity .25s,transform .2s;display:flex;flex-direction:column;gap:10px;box-shadow:0 1px 0 var(--rule),0 8px 24px -16px #2340d655}
+.card:hover{transform:translateY(-3px)}
+.card .meta{color:var(--coral)!important;font-weight:600}
+.skills>div{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 1px 0 var(--rule)}
+.skills h3{display:flex;align-items:center;gap:8px}
+.skills h3::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--c)}
+.band:not(.plane) .card{background:var(--plane)}
+.contact .btn.solid{background:var(--coral);border-color:var(--coral);color:#fff}
+footer{background:var(--hero);color:#c9d4ff!important;border:0!important}
+nav .brand{color:var(--hero)}
+:root[data-theme=dark] nav .brand{color:var(--sky)}
+.card p{margin:0;color:var(--muted)}
+.card .meta{font-size:14px;color:var(--muted)}
+.card a.more{margin-top:auto;font-weight:600;font-size:15px}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px;margin-top:8px}
+.contact .card{background:var(--card)}
+.contact .v{font-weight:600;overflow-wrap:anywhere}
+footer{padding:28px max(5vw,16px);color:var(--muted);font-size:14px;border-top:1px solid var(--rule)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--line);color:var(--bg);padding:10px 16px;border-radius:6px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.show{opacity:1}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(max-width:700px){.job{grid-template-columns:minmax(0,1fr);gap:6px}.stats{grid-template-columns:minmax(0,1fr)}.fig{min-height:420px}}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Sections"><div class="wrap">
+  <span class="brand">Anees Mohammad</span>
+  <a class="l" href="#experience">Experience</a>
+  <a class="l" href="#skills">Skills</a>
+  <a class="l" href="#projects">Projects</a>
+  <a class="l" href="#education">Education</a>
+  <a class="l" href="#certifications">Certifications</a>
+  <a class="l" href="#contact">Contact</a>
+</div></nav>
+
+<header class="band hero" id="top"><div class="wrap">
+  <div class="id">
+    <div class="avatar"><img src="photo.jpg" alt="Photo of Anees Ul Haq Mohammad" onerror="this.remove()"><span>AM</span></div>
+    <div><h1>Anees Ul Haq Mohammad</h1>
+    <p class="role">Data Validation Specialist · <b>BI &amp; healthcare finance analytics</b></p></div>
+  </div>
+  <p class="lede">I turn messy healthcare claims, pharmacy and ERP data into reports hospital teams act on. I work in SQL, Power BI and Python, and build AI tools on AWS. I'm based in Grand Rapids, Michigan, and open to relocation.</p>
+  <div class="btns">
+    <a class="btn solid" href="#contact">Get in touch</a>
+    <a class="btn" href="https://www.linkedin.com/in/aneesulhaqmohammad/">LinkedIn</a>
+    <a class="btn" href="https://github.com/aneesulhaq2">GitHub</a>
+  </div>
+  <div class="fig" id="pipe" role="img" aria-label="Career path: Cutso LLP 2020 to 2022, M.S. at Grand Valley State 2023 to 2025, BI intern at SpendMend 2024, Data Validation Specialist at SpendMend from 2025"><svg id="pipesvg"></svg></div>
+  <div class="stats">
+    <div class="stat"><b>100+</b><span>claim and reimbursement requests validated each week</span></div>
+    <div class="stat"><b>7–10</b><span>recurring reports and dashboards I own</span></div>
+    <div class="stat"><b>M.S. · 3.6</b><span>Data Science &amp; Analytics, Grand Valley State</span></div>
+  </div>
+</div></header>
+
+<section class="band plane" id="experience"><div class="wrap">
+  <div class="sec-head"><h2>Experience</h2></div>
+  <div class="filterbar" id="activebar" aria-live="polite">Click any skill to see where I've used it.</div>
+  <div id="jobs"></div>
+</div></section>
+
+<section class="band" id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="skills" id="skillgrid"></div>
+</div></section>
+
+<section class="band plane" id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <div class="grid2" id="projgrid"></div>
+</div></section>
+
+<section class="band" id="education"><div class="wrap">
+  <h2>Education</h2>
+  <div class="edu" id="edugrid"></div>
+</div></section>
+
+<section class="band plane" id="certifications"><div class="wrap">
+  <h2>Certifications</h2>
+  <div class="grid2" id="certgrid"></div>
+</div></section>
+
+<section class="band" id="contact"><div class="wrap">
+  <h2>Let's talk</h2>
+  <p class="lede">I'm open to data analyst, BI developer, data engineering and healthcare analytics roles.</p>
+  <div class="contact">
+    <div class="card"><span class="meta">Email</span><span class="v" id="em">aneesulhaqmohammad7@gmail.com</span>
+      <div class="btns"><a class="btn solid" href="mailto:aneesulhaqmohammad7@gmail.com">Email me</a><button class="btn" id="copy" type="button">Copy address</button></div></div>
+    <div class="card"><span class="meta">LinkedIn</span><span class="v">linkedin.com/in/aneesulhaqmohammad</span>
+      <div class="btns"><a class="btn" href="https://www.linkedin.com/in/aneesulhaqmohammad/">Open profile</a></div></div>
+    <div class="card"><span class="meta">GitHub</span><span class="v">github.com/aneesulhaq2</span>
+      <div class="btns"><a class="btn" href="https://github.com/aneesulhaq2">See code</a></div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© <span id="yr"></span> Anees Ul Haq Mohammad · Grand Rapids, MI</div></footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+{
+/* ===== EDIT YOUR CONTENT HERE ===== */
+const JOBS=[
+ {title:"Data Validation Specialist",org:"SpendMend LLC",place:"Grand Rapids, MI",when:"Jun 2025 – Present",
+  pts:["Validate 100+ reimbursement and claim requests every week for hospital clients, including Medicare, Medicaid and other government-payer claims.",
+   "Build custom Power BI reports with the pharmacy intelligence team on 340B, rebates, inventory use and purchase rerouting.",
+   "Own 7–10 recurring reports and dashboards on hospital finance data, including Power BI reporting for a dental hospital client.",
+   "Tuned SQL queries and joins, which cut 1–2 hours of delay from morning reporting.",
+   "Coordinate work across a team of 2–4 analysts, and train coworkers on Power BI, SQL and internal tools.",
+   "Cross-check records in Microsoft Access, run ad hoc SQL analysis, and track work in JIRA."],
+  tags:["SQL","Power BI","DAX","MS Access","JIRA","Healthcare claims","340B"]},
+ {title:"BI Specialist / Data Analyst Intern",org:"SpendMend LLC",place:"Grand Rapids, MI",when:"May 2024 – Dec 2024",
+  pts:["Built client-facing spend analytics reports: pulled data from several client ERP systems, including PeopleSoft, built SQL views and delivered the reports in Power BI.",
+   "Worked on a standard data pipeline and ETL process for PeopleSoft ERP data.",
+   "Built dashboards that show hospital clients where they can save money."],
+  tags:["SQL","Power BI","ETL","PeopleSoft","Power Query"]},
+ {title:"Civic Engagement Graduate Assistant",org:"Grand Valley State University",place:"Allendale, MI",when:"2023 – 2025",
+  pts:["Held a graduate assistantship alongside my M.S. in Data Science & Analytics."],tags:[]},
+ {title:"Data Analytics Consultant (contract)",org:"Novartis",place:"",when:"Contract",
+  pts:["Built ML models for pharmaceutical analytics on large-scale patient data."],
+  tags:["Python","Machine learning","Healthcare"]},
+ {title:"Data Analyst",org:"Cutso LLP",place:"India",when:"Jun 2020 – Jun 2022",
+  pts:["Analyzed inventory and customer data for retail clients.","Wrote and tuned SQL queries, and presented reports to clients."],
+  tags:["SQL","Reporting"]}
+];
+const SKILLS={
+ "Analytics & BI":["Power BI","DAX","Power Query","Row-level security","SSRS","SAP BusinessObjects","Looker","Reporting"],
+ "Data & databases":["SQL","Teradata","Snowflake","BigQuery","MS Access","ETL"],
+ "Programming":["Python","R","Java"],
+ "Cloud & AI":["AWS Lambda","SageMaker","Bedrock","S3","Glue","Kinesis","RAG pipelines","LLM orchestration"],
+ "Big data":["Spark","Airflow","Databricks","Hadoop"],
+ "Enterprise systems":["Workday","PeopleSoft","Salesforce data model","PowerApps","JIRA"],
+ "Methods & domain":["Machine learning","Deep learning","Regression","Clustering","LDA","Healthcare claims","340B"]
+};
+const PROJECTS=[
+ {name:"IRIS AI — invoice intelligence",meta:"Concept demo · SpendMend",desc:"An AI layer on top of a legacy OCR invoice tool, using retrieval-augmented generation to answer questions about invoices. I presented it to internal management.",tags:["RAG pipelines","LLM orchestration","Python"]},
+ {name:"Credit risk classification",meta:"GitHub",desc:"Models that sort loan applicants by credit risk, from data cleaning and feature work through to evaluation.",tags:["Python","Machine learning"],link:"https://github.com/aneesulhaq2"},
+ {name:"Credit card fraud detection",meta:"GitHub",desc:"Classifiers that detect fraudulent transactions in a heavily imbalanced dataset.",tags:["Python","Machine learning"],link:"https://github.com/aneesulhaq2"},
+ {name:"Handwritten digits with Keras",meta:"GitHub",desc:"Artificial neural networks trained on MNIST, comparing different network designs.",tags:["Python","Deep learning"],link:"https://github.com/aneesulhaq2"},
+ {name:"Regression modeling",meta:"GitHub · GVSU",desc:"Statistical regression analyses in Python and R, documented during my M.S.",tags:["Python","R","Regression"],link:"https://github.com/aneesulhaq2"},
+ {name:"Data cleaning workflows",meta:"GitHub",desc:"Reusable steps for profiling, cleaning and validating messy raw datasets.",tags:["Python","ETL"],link:"https://github.com/aneesulhaq2"}
+];
+const EDU=[
+ {name:"M.S. Data Science & Analytics",meta:"Grand Valley State University · Aug 2023 – Apr 2025",desc:"GPA 3.6. Coursework in machine learning, statistical modeling, big data and analytics."},
+ {name:"B.S. Data Science",meta:"Krishna University, Machilipatnam, India",desc:"Foundations in statistics, programming and data analysis."}
+];
+const CERTS=[
+ {name:"Microsoft Technology Associate: Python",meta:"Microsoft"},
+ {name:"Career Essentials in Generative AI",meta:"Microsoft & LinkedIn"},
+ {name:"Google Looker and Google Cloud certifications",meta:"Google"},
+ {name:"Introduction to Big Data & Hadoop",meta:"Great Learning"}
+];
+/* ===== END CONTENT ===== */
+
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const chip=(t,cls="")=>`<button type="button" class="chip ${cls}" data-skill="${esc(t)}">${esc(t)}</button>`;
+let active=null;
+
+document.getElementById("jobs").innerHTML=JOBS.map(j=>`<article class="job reveal" data-tags="${esc(j.tags.join("|"))}">
+ <div><div class="when">${esc(j.when)}</div><div class="where">${esc(j.place)}</div></div>
+ <div><h3>${esc(j.title)}</h3><div class="where">${esc(j.org)}</div>
+ <ul>${j.pts.map(p=>`<li>${esc(p)}</li>`).join("")}</ul>
+ <div class="tags">${j.tags.map(t=>chip(t,"tag")).join("")}</div></div></article>`).join("");
+
+const HUES=["#2340d6","#ff5a3c","#16c2a3","#ffb020","#5aa9ff","#ff6fae","#8a5cff"];
+document.getElementById("skillgrid").innerHTML=Object.entries(SKILLS).map(([g,list],i)=>`<div class="reveal" style="--c:${HUES[i%HUES.length]}"><h3>${esc(g)}</h3><div class="tags">${list.map(t=>chip(t).replace('class="chip ','style="--c:'+HUES[i%HUES.length]+'" class="chip ')).join("")}</div></div>`).join("");
+
+document.getElementById("projgrid").innerHTML=PROJECTS.map(p=>`<div class="card reveal" data-tags="${esc(p.tags.join("|"))}">
+ <span class="meta">${esc(p.meta)}</span><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p>
+ <div class="tags">${p.tags.map(t=>chip(t,"tag")).join("")}</div>
+ ${p.link?`<a class="more" href="${esc(p.link)}">View on GitHub →</a>`:""}</div>`).join("");
+
+document.getElementById("edugrid").innerHTML=EDU.map(e=>`<div class="card reveal"><span class="meta">${esc(e.meta)}</span><h3>${esc(e.name)}</h3><p>${esc(e.desc)}</p></div>`).join("");
+document.getElementById("certgrid").innerHTML=CERTS.map(c=>`<div class="card reveal"><span class="meta">${esc(c.meta)}</span><h3>${esc(c.name)}</h3></div>`).join("");
+
+const bar=document.getElementById("activebar");
+function applyFilter(){
+  document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("on",c.dataset.skill===active));
+  document.querySelectorAll("[data-tags]").forEach(el=>{
+    const has=el.dataset.tags.split("|").includes(active);
+    el.classList.toggle("dim",!!active&&!has);
+  });
+  if(active){
+    const n=JOBS.filter(j=>j.tags.includes(active)).length+PROJECTS.filter(p=>p.tags.includes(active)).length;
+    bar.innerHTML=`Showing where I've used <b style="color:var(--ink)">${esc(active)}</b>: ${n} match${n===1?"":"es"}. <button type="button" class="chip" id="clr">Clear</button>`;
+    document.getElementById("clr").onclick=()=>{active=null;applyFilter()};
+  } else bar.textContent="Click any skill to see where I've used it.";
+}
+document.addEventListener("click",e=>{
+  const c=e.target.closest(".chip[data-skill]");if(!c)return;
+  active=active===c.dataset.skill?null:c.dataset.skill;applyFilter();
+  if(active&&c.closest("#skills"))document.getElementById("experience").scrollIntoView();
+});
+
+const toast=document.getElementById("toast");
+document.getElementById("copy").onclick=async()=>{
+  try{await navigator.clipboard.writeText("aneesulhaqmohammad7@gmail.com");toast.textContent="Email copied"}
+  catch(_){toast.textContent="Copy failed, select the address above"}
+  toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),1800);
+};
+document.getElementById("yr").textContent=new Date().getFullYear();
+
+/* career pipeline drawing */
+const STAGES=[{y:"2020–22",t:"Cutso LLP",s:"Retail data analyst"},{y:"2023–25",t:"Grand Valley State",s:"M.S. Data Science"},{y:"2024",t:"SpendMend",s:"BI intern"},{y:"2025–now",t:"SpendMend",s:"Data Validation Specialist",cur:1}];
+const svg=document.getElementById("pipesvg"),fig=document.getElementById("pipe");
+const draw=()=>{
+  const W=fig.clientWidth,H=fig.clientHeight,vert=W<700,ink="#ffffff";
+  const NODE=["#5aa9ff","#16c2a3","#ff5a3c","#ffc23c"];
+  let out=`<defs><linearGradient id="pg" x1="0" y1="0" x2="${vert?0:1}" y2="${vert?1:0}"><stop offset="0" stop-color="#5aa9ff"/><stop offset=".4" stop-color="#16c2a3"/><stop offset=".7" stop-color="#ff5a3c"/><stop offset="1" stop-color="#ffc23c"/></linearGradient><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter></defs>`;
+  const pts=STAGES.map((_,i)=>vert?{x:W*0.18,y:H*(0.12+i*0.25)}:{x:W*(0.11+i*0.26),y:H*0.46});
+  const d=`M${pts.map(p=>p.x+" "+p.y).join(" L")}`;
+  out+=`<path d="${d}" stroke="url(#pg)" stroke-width="14" fill="none" stroke-linecap="round" opacity=".35" filter="url(#glow)"/>`;
+  out+=`<path d="${d}" stroke="url(#pg)" stroke-width="6" fill="none" stroke-linecap="round"/>`;
+  pts.forEach((p,i)=>{
+    const st=STAGES[i],r=vert?20:26;
+    if(st.cur)out+=`<circle cx="${p.x}" cy="${p.y}" r="${r+12}" fill="${NODE[i]}" opacity=".35" filter="url(#glow)"/>`;
+    out+=`<circle cx="${p.x}" cy="${p.y}" r="${r}" fill="${NODE[i]}" stroke="#ffffff" stroke-width="3"/>`;
+    out+=`<text x="${p.x}" y="${p.y+5}" text-anchor="middle" font-size="14" font-weight="700" fill="#10131c">${i+1}</text>`;
+    const tx=vert?p.x+40:p.x,ta=vert?"start":"middle",ty=vert?p.y-12:p.y+58;
+    out+=`<text x="${tx}" y="${ty}" text-anchor="${ta}" font-size="13" fill="${ink}" opacity=".7">${esc(st.y)}</text>`;
+    out+=`<text x="${tx}" y="${ty+21}" text-anchor="${ta}" font-size="${vert?16:17}" font-weight="600" fill="${ink}">${esc(st.t)}</text>`;
+    out+=`<text x="${tx}" y="${ty+41}" text-anchor="${ta}" font-size="14" fill="${ink}" opacity=".75">${esc(st.s)}</text>`;
+  });
+  if(!vert)out+=`<text x="${W*0.11-26}" y="${H*0.46-48}" font-size="13" font-weight="600" fill="${ink}" opacity=".6">Career pipeline</text>`;
+  svg.innerHTML=out;
+};
+const ro=new ResizeObserver(draw);ro.observe(fig);
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",draw);
+new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+
+/* scroll reveal + active nav */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+const links=[...document.querySelectorAll("nav a.l")];
+const navObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("section[id]").forEach(s=>navObs.observe(s));
+}
+</script>
+</body>
+</html>
